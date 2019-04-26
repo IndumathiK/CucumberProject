@@ -1,4 +1,4 @@
-package CaseStudy2;
+package skeleton;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,17 +25,17 @@ public class OrderDetails
 	  @FindBy(how=How.CSS,using="a[class='btn btn-success btn-product']")
 	  public static WebElement addCart;
 	  
-	  @FindBy(how=How.XPATH,using="//*[@id=\"header\"]/div[1]/div/div/div[2]/div/a[2]")
+	  @FindBy(how=How.PARTIAL_LINK_TEXT,using="Cart")
 	  public static WebElement cart;
 	  
-	  @FindBy(how=How.CLASS_NAME,using="btn btn-success btn-block")
+	  @FindBy(how=How.CSS,using="a[href='checkout.htm']")
 	  public static WebElement checkOut;
 	  
 	  @FindBy(how=How.CSS,using="input[value='Proceed to Pay']")
 	  public static WebElement proceedPay;
 	  
-	  @FindBy(how=How.XPATH,using="//*[@id=\\\"swit\\\"]/div[1]/div/label/i")
-	  public static WebElement selectBank;
+	  //@FindBy(how=How.CSS,using="input[value='Andhra Bank']")
+	 // public static WebElement selectBank;
 	  
 	  @FindBy(how=How.CSS,using="a[onclick='radioValue()']")
 	  public static WebElement continueButton;

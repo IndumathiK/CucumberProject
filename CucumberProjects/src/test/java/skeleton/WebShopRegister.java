@@ -19,7 +19,7 @@ import cucumber.api.java.en.When;
 public class WebShopRegister 
 { 
 	WebDriver driver;
-	@Before
+	//@Before
 	public void init()
 	{
 		System.setProperty("webdriver.gecko.driver","C:\\Users\\indumathi.krishnan\\Downloads\\geckodriver-v0.24.0-win32\\geckodriver.exe");

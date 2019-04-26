@@ -1,43 +1,27 @@
-package CaseStudy2;
+package skeleton;
 
-import java.io.File;
 import java.util.concurrent.TimeUnit;
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxBinary;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
-
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import testmeapp.utility.DriverUtility;
-
 
 public class OrderPayment 
 {
 	WebDriver driver;
 	@Before
 	public void initial2()
-	{
-		System.setProperty("webdriver.gecko.driver","C:\\Users\\indumathi.krishnan\\Downloads\\geckodriver-v0.24.0-win32\\geckodriver.exe");
-		File pathBinary = new File("C:\\Users\\Training_b6b.00.03\\AppData\\Local\\Mozilla Firefox\\firefox.exe");
-		FirefoxBinary firefoxBinary = new FirefoxBinary(pathBinary);   
-		DesiredCapabilities desired = DesiredCapabilities.firefox();
-		FirefoxOptions options = new FirefoxOptions();
-		desired.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options.setBinary(firefoxBinary));
-		driver = new FirefoxDriver(options);
-		
-		//driver=DriverUtility.getDriver("ie");
+	{	
+		driver=DriverUtility.getDriver("chrome");
 		PageFactory.initElements(driver, OrderDetails.class);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 
-	@Given("Type URL and login with valid username")
+	@Given("Type URL and login with valid Username")
 	public void type_URL_and_login_with_valid_username() 
 	{
 		driver.get("http://10.232.237.143:443/TestMeApp/login.htm");
@@ -60,7 +44,7 @@ public class OrderPayment
 		OrderDetails.cart.click();
 		OrderDetails.checkOut.click();
 		OrderDetails.proceedPay.click();
-		OrderDetails.selectBank.click();
+		driver.findElement(By.xpath("//*[@id=\"swit\"]/div[1]/div/label/i")).click();
 		OrderDetails.continueButton.click();	    
 	}
 

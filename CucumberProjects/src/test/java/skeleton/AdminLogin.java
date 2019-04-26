@@ -21,7 +21,7 @@ import cucumber.api.java.hu.Amikor;
 public class AdminLogin 
 {
 	WebDriver driver;
-	@Before
+	//@Before
 	public void initial()
 	{
 		System.setProperty("webdriver.gecko.driver","C:\\Users\\indumathi.krishnan\\Downloads\\geckodriver-v0.24.0-win32\\geckodriver.exe");

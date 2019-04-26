@@ -16,7 +16,7 @@ public class LoginStepDefs
 {
 	WebDriver driver;
 	
-	@Before
+	//@Before
 	public void before()
 	{
 		/*
