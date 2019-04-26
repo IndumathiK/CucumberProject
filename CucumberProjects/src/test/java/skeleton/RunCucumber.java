@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(plugin= {"pretty","html:src/cucumber-reports"},
-                 features="",
+                 features="src/test/resources/skeleton/CaseStudy2.feature",
                  monochrome=true)
 public class RunCucumber 
 {

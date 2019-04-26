@@ -60,7 +60,6 @@ public void admin_select_product_and_add_to_cart()
 	Select dd2=new Select(yy1);
 	dd2.selectByValue("112112");
 	
-	//AdminProduct.SubCategory.click();
 	AdminProduct.productName.sendKeys("HP Laptops");
 	AdminProduct.price.sendKeys("40000");
 	AdminProduct.quantity.sendKeys("1");
@@ -68,8 +67,6 @@ public void admin_select_product_and_add_to_cart()
     AdminProduct.description.sendKeys("Laptop windows-10,8GB Ram,1TB storage");
     AdminProduct.addButton.click();
     
-    //driver.findElement(By.xpath("/html/body/header/div/b/c:if/a[1]")).click();
-   //AdminProduct.homelink.click();
     driver.get("http://10.232.237.143:443/TestMeApp/adminHome.htm");
     AdminProduct.viewProduct.click();
     
