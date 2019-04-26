@@ -82,6 +82,7 @@ public void admin_select_product_and_add_to_cart()
    	dd4.selectByValue("112112");
    	
    	AdminProduct.viewButton.click();
+   	
     
 	
 }
